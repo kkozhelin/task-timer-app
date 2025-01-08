@@ -30,7 +30,6 @@ const tasksSlice = createSlice({
       state.tasks.push(newTask);
     },
     toggleTask: (state, action: PayloadAction<string>) => {
-      console.log(action);
       const task = state.tasks.find((t) => t.id === action.payload);
       if (task) task.completed = !task.completed;
     },
